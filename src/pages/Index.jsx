@@ -73,9 +73,8 @@ const Index = () => {
       
       <footer className="bg-movie-dark py-6">
         <div className="container mx-auto px-4 text-center text-gray-400">
-          <p>FilmFiesta © {new Date().getFullYear()} - Powered by TMDB</p>
+          <p>FilmFiesta © {new Date().getFullYear()}</p>
           <p className="text-sm mt-2">
-            This product uses the TMDB API but is not endorsed or certified by TMDB.
           </p>
         </div>
       </footer>
