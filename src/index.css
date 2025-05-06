@@ -1,1 +1,65 @@
-@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 263 54% 74%;
+    --primary-foreground: 240 5.9% 10%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 12 96% 52%;
+    --accent-foreground: 240 5.9% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  .movie-card {
+    @apply relative overflow-hidden rounded-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-xl;
+  }
+
+  .movie-card-image {
+    @apply aspect-[2/3] w-full object-cover transition-transform duration-300;
+  }
+
+  .movie-card-content {
+    @apply absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 text-white;
+  }
+
+  .movie-card:hover .movie-card-content {
+    @apply bg-gradient-to-t from-black/95 via-black/70 to-transparent;
+  }
+
+  .movie-rating {
+    @apply absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-full bg-black/70 font-semibold text-white;
+  }
+}
