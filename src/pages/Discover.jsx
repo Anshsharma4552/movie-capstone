@@ -264,7 +264,7 @@ const Discover = () => {
         <div className="container mx-auto px-4 text-center text-gray-400">
           <p>FilmFiesta © {new Date().getFullYear()} - Powered by TMDB</p>
           <p className="text-sm mt-2">
-            This product uses the TMDB API but is not endorsed or certified by TMDB.
+            This product uses the TMDB API.
           </p>
         </div>
       </footer>
